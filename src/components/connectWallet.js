@@ -32,8 +32,8 @@ export function ConnectWallet({ children }) {
         const currentChainId = await window.ethereum.request({
           method: 'eth_chainId',
         });
-        if (currentChainId !== '0x66eee') { // '0x66eee' is the chain ID for Arbitrum Sepolia Testnet
-          alert("Connect to Arbitrum Sepolia Testnet");
+        if (currentChainId !== '0xaa36a7') { // '0x66eee' is the chain ID for Arbitrum Sepolia Testnet
+          alert("Connect to Sepolia Testnet");
           return;
         }
         const instance = new web3.eth.Contract(nftABI.abi, nftContractAddress);
